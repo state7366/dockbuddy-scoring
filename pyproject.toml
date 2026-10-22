@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dockbuddy-scoring"
+version = "0.1.1"
+description = "DockBuddy 蛋白突变打分适配器(26 模型)，从 pipeline/scoring 抽出的解耦版本"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "DockBuddy" }]
+keywords = ["protein", "variant-scoring", "zero-shot", "ddg", "bioinformatics"]
+dependencies = [
+    "dockbuddy-common>=0.1.1",
+]
+
+[project.urls]
+Repository = "https://pypi.cnb.cool/vcinex/bioinfo/-/packages/simple"
+
+[tool.setuptools.packages.find]
+include = ["dockbuddy_scoring*"]
