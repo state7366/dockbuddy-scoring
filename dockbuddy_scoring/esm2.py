@@ -118,7 +118,7 @@ def esm2_scores(wt_seq: str, variants: Iterable[Any], *,
       models_dir: 本地权重目录(空则走 fair-esm 自动下载)。
     """
     from dockbuddy_common import resolve_device
-    from scoring.esm import esm1v_single_score  # 打分核心(对任何 fair-esm mask 模型通用)
+    from dockbuddy_scoring.esm import esm1v_single_score  # 打分核心(对任何 fair-esm mask 模型通用)
 
     device = resolve_device(device)
     seq = "".join(str(wt_seq).split())

@@ -20,7 +20,7 @@ model.py + read.py 的 CodonTransformer/Vocab/greedy 生成)已收敛到本模�
 原仓库运行时; vocab_OMA.json 收敛为 ortholog_vocab.json(本包资源文件)。
 
 使用:
-  from scoring.ortholog import redesign
+  from dockbuddy_scoring.ortholog import redesign
   out = redesign("ATGAACTTT...", source_species="IDESA", target_species="BACSU",
                  model_path="/path/to/aligned_model.pt")
   # -> {"predicted_dna": "...", "predicted_protein": "...", "source_protein": "..."}

@@ -128,8 +128,8 @@ def score_variants(wt_seq: str, variants: Iterable[Any], *,
       models_dir: esm2 本地权重目录(空则走 fair-esm 自动下载)。
     """
     from dockbuddy_common import resolve_device
-    from scoring.esm import esm1v_single_score
-    from scoring.esm2 import load_esm2
+    from dockbuddy_scoring.esm import esm1v_single_score
+    from dockbuddy_scoring.esm2 import load_esm2
 
     device = resolve_device(device)
     seq = "".join(str(wt_seq).split())

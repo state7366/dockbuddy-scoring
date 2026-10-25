@@ -7,7 +7,7 @@ libscore_remote.py —— 远程 GPU 打分通道(腾讯云 TAT, 2026-10-08)
 实现「流水线调用 → 真实模型输入输出」端到端走通。
 
 用法(由 orchestrator 的 scoring.remote 触发, 见 run_pipeline):
-  from scoring.remote import score_variants
+  from dockbuddy_scoring.remote import score_variants
   scores = score_variants("esm1v", wt_seq, variants, remote_cfg)
   # -> {"F205G": 1.234, ...}   (值为模型打分, metric 名由 orchestrator 统一包装)
 
