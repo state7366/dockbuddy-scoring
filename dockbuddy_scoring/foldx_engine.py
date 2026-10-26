@@ -66,6 +66,7 @@ FOLDX_BIN_ENV = "FOLDX_BIN"
 # 不在代码里硬编码个人桌面路径(保持可移植); 二进制位置由 FOLDX_BIN 环境变量或
 # CLI --bin 指定。常见候选仅作回退探测(均不指向具体用户目录)。
 _FOLDX_BIN_CANDIDATES: Tuple[str, ...] = (
+    "foldx",        # Linux 软链(/usr/local/bin/foldx, 部署侧 tool_install 落位)
     "foldx_1.exe",
     "foldx.exe",
     "foldx5.exe",
