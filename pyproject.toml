@@ -20,3 +20,6 @@ Repository = "https://pypi.cnb.cool/vcinex/bioinfo/-/packages/simple"
 
 [tool.setuptools.packages.find]
 include = ["dockbuddy_scoring*"]
+
+[tool.setuptools.package-data]
+dockbuddy_scoring = ["*.json"]
