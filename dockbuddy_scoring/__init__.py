@@ -9,7 +9,8 @@
 """
 from . import msa_stats  # noqa: F401
 from .foldx_engine import FoldXError, foldx_ddg  # noqa: F401
+from . import md_stability  # noqa: F401  (MD 构象稳定性打分, 2026-10-28 沉淀)
 
-__version__ = "0.1.1"
+__version__ = "0.1.6"
 
-__all__ = ["__version__", "FoldXError", "foldx_ddg", "msa_stats"]
+__all__ = ["__version__", "FoldXError", "foldx_ddg", "msa_stats", "md_stability"]

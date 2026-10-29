@@ -1,6 +1,6 @@
 # dockbuddy-scoring
 
-DockBuddy 的蛋白突变打分适配器（26 个模型），从 `pipeline/scoring/` 抽出的解耦版本。
+DockBuddy 的蛋白突变打分适配器（27 个模型），从 `pipeline/scoring/` 抽出的解耦版本。
 
 ## 安装
 
@@ -21,6 +21,7 @@ from dockbuddy_scoring.esm import esm1v_scores
 from dockbuddy_scoring.saprot import score_variants
 from dockbuddy_scoring.foldx import score_variants
 from dockbuddy_scoring.foldx_engine import foldx_ddg, FoldXError
+from dockbuddy_scoring.md_stability import score_variants, analyze_trajectory
 ```
 
 ## 模型清单
@@ -30,6 +31,7 @@ from dockbuddy_scoring.foldx_engine import foldx_ddg, FoldXError
 | 纯序列 | esm1v / esm2 / venusplm / venusrem / tranception |
 | MSA | ddgun / lfb / evmutation / msa_transformer / profam |
 | 结构 | esm_if / foldx / saprot / thermompnn / solubility_mpnn / catpred / geostab |
+| MD 轨迹 | md_stability（催化三联体几何收敛 + loop 刚化，越低越稳定）|
 | blocked/restricted | promep / deepsequence / eve / unirep / muformer / rosetta |
 
 权重路径可由 `dockbuddy-models` 解析（`hub.weight_path(...)`），本包只负责打分逻辑。
